@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+prefix="#{PREFIX}"
+
+core_cmd_path="$prefix/lib/soundoutputcore.app/Contents/MacOS/soundoutputcore"
+
+if [ -e $core_cmd_path ]; then
+    exec $core_cmd_path $@
+else
+    echo soundoutputcore.app is not installed. 1>&2
+    exit 1
+fi
+
