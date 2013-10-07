@@ -1,6 +1,6 @@
 # soundoutput
 
-**soundoutput** is a command line tool for switch a sound output device on OS X.
+**soundoutput** is a command line tool for switching a sound output device on OS X.
 
 ## Installation
 
