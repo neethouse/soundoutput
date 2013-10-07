@@ -7,18 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "soundoutput.h"
 #import "CoreAudioUtils.h"
 
-#pragma mark Command Info
-
-#define BUNDLE_INFO(key) ([[NSBundle mainBundle] infoDictionary][key])
-
-#define CMD_NAME @"soundoutput"
-
-#define SOUNDOUTPUT_VERSION BUNDLE_INFO(@"CFBundleShortVersionString")
-
-
-#pragma mark - Utils
+#pragma mark Utils
 
 static int fprintNSString(FILE *fp, NSString *format, ...) {
     va_list ap;
@@ -45,9 +37,9 @@ static int printNSString(NSString *format, ...) {
 }
 
 static NSArray *sortByID(NSArray *dicts) {
-    return dicts;
-    //return [dicts sortedArrayUsingDescriptors:
-    //        @[ [NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES] ]];
+    //return dicts;
+    return [dicts sortedArrayUsingDescriptors:
+            @[ [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES] ]];
 }
 
 static NSString *normalizeName(NSString *name) {
@@ -59,11 +51,11 @@ static NSString *normalizeName(NSString *name) {
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSArray *args = [NSProcessInfo processInfo].arguments;
 
     int result = [self main:args];
+    
     exit(result);
 }
 
@@ -153,7 +145,9 @@ static NSString *normalizeName(NSString *name) {
                   @"\n"
                   @"Options\n"
                   @"    -l, --list\tList all sound output devices\n"
-                  @"    -h, --help\tDisplay this help\n",
+                  @"    -h, --help\tDisplay this help\n"
+                  @"\n"
+                  @"Documentation can be found at https://github.com/neethouse/soundoutput#readme\n",
                   CMD_NAME);
     return 0;
 }
@@ -162,7 +156,7 @@ static NSString *normalizeName(NSString *name) {
  * バージョンを表示する.
  */
 - (int)showVersion {
-    printNSString(@"%1$@ version %2$@\n", CMD_NAME, SOUNDOUTPUT_VERSION);
+    printNSString(@"%1$@ version %2$@ (c) 2013 neethouse.org\n", CMD_NAME, SOUNDOUTPUT_VERSION);
     return 0;
 }
 

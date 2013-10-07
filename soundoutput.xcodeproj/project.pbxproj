@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42126A9417EF075A002F1F2D /* soundoutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = soundoutput.h; sourceTree = "<group>"; };
 		42400A0117EBEC82003E11A9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		42400A0417EBEC82003E11A9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		42400A0517EBEC82003E11A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -120,6 +121,7 @@
 		42ECFE6D17ED9AF800C27A3A /* soundoutputcore */ = {
 			isa = PBXGroup;
 			children = (
+				42126A9417EF075A002F1F2D /* soundoutput.h */,
 				42ECFE9817ED9B4400C27A3A /* AppDelegate.h */,
 				42ECFE9917ED9B4400C27A3A /* AppDelegate.m */,
 				42ECFE9A17ED9B4400C27A3A /* CoreAudioUtils.h */,
@@ -453,6 +455,7 @@
 				42ECFE9417ED9AF900C27A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42ECFE9517ED9AF900C27A3A /* Build configuration list for PBXNativeTarget "soundoutputcoreTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +464,7 @@
 				42ECFE9717ED9AF900C27A3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
