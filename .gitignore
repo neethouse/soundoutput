@@ -19,7 +19,10 @@ DerivedData
 #CocoaPods
 Pods
 
-# 
+# for application
 /build
 /DIST
+
+# Xcode 5
+xcshareddata
 
