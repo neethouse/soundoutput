@@ -6,7 +6,7 @@ install:
 	mkdir -p "$(PREFIX)/bin"
 	
 	cp "bin/$(CMD_NAME)" "$(PREFIX)/bin/$(CMD_NAME)"
-	sed -i -e "s/#{PREFIX}/$(subst /,\/,$(PREFIX))/" "$(PREFIX)/bin/$(CMD_NAME)"
+	sed -i "" -e "s/#{PREFIX}/$(subst /,\/,$(PREFIX))/" "$(PREFIX)/bin/$(CMD_NAME)"
 	
 	xcodebuild -project soundoutput.xcodeproj \
 		-scheme soundoutputcore \
