@@ -2,6 +2,11 @@
 
 **soundoutput** is a command line tool for switching a sound output device on OS X.
 
+## Requirements
+
+- OS X Lion (10.7) or later
+- Xcode
+
 ## Installation
 
 ```sh
